@@ -14,14 +14,14 @@ const firebaseConfig = {
   appId: "1:326926305055:web:bb88f16e80b9d9f7bbd22a"
 };
 
-const allowedNames = ["richard", "julia", "herma"];
+const allowedNames = ["richard", "julia", "herma","marin"];
 
 // Firebase initialiseren
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
 // Helper: maak array van tijdvakken per kwartier
-function getTimeBlocks(start = 5, end = 12) {
+function getTimeBlocks(start = 5, end = 24) {
   let times = [];
   for (let h = start; h < end; h++) {
     for (let m of [0, 15, 30, 45]) {
@@ -124,7 +124,7 @@ export default function App() {
     <div className="min-h-screen bg-gray-50 px-2 py-6">
       <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-xl p-4">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold">Gezamenlijke Agenda</h2>
+          <h2 className="text-2xl font-bold">Gezamenlijke Agenda v2</h2>
           <div className="flex gap-2">
             <button className="p-2 bg-gray-200 rounded" onClick={() => setWeekOffset((w) => w - 1)}>
               Vorige
