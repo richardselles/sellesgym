@@ -14,7 +14,7 @@ const firebaseConfig = {
   appId: "1:326926305055:web:bb88f16e80b9d9f7bbd22a"
 };
 
-const allowedNames = ["richard", "julia", "herma","marin","martijn"];
+const allowedNames = ["richard", "julia", "herma","marin","martijn","herma"];
 
 // Firebase initialiseren
 const app = initializeApp(firebaseConfig);
